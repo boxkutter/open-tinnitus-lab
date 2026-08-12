@@ -182,7 +182,7 @@ exacerbation
 partial remission
   ↓
 recurrence
-
+```
 ---
 
 ## Measurement
