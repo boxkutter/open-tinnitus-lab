@@ -106,6 +106,8 @@ An AI-generated hypothesis or interpretation may be recorded, but it does not be
 
 ## Conceptual architecture
 
+## Conceptual architecture
+
 ```text
                     PERSON
                       │
@@ -149,74 +151,15 @@ An AI-generated hypothesis or interpretation may be recorded, but it does not be
         │              │
         └──────┬───────┘
                ▼
-       CAUSAL MODEL
+         CAUSAL MODEL
                │
                ▼
          INTERVENTION
                │
+               ▼
+            OUTCOME
 
 This represents the conceptual architecture of OTL-O. It is not itself a database schema.
 
-External standards
-
-OTL-O should reference established tinnitus standardisation work rather than attempting to replace it.
-
-Important reference frameworks include:
-
-Tinnitus Research Initiative assessment and outcome standards;
-TINNET/COMiT work on outcome measurement;
-COMiT'ID core outcome domains;
-international consensus work on tinnitus definition and classification;
-consensus work on somatosensory tinnitus.
-
-See provenance.md for the initial reference framework.
-
-Validation status
-
-Version 0.1 has been conceptually tested against representative tinnitus standardisation and consensus publications.
-
-The validation demonstrated that the model can represent:
-
-standardized patient assessment;
-tinnitus phenotype and impact separately;
-constructs separately from measurement instruments;
-longitudinal and cross-sectional studies;
-consensus statements;
-unresolved diagnostic and biomarker questions;
-competing interpretations;
-evidence and provenance.
-
-This is a conceptual validation, not yet a formal ontology-reasoner validation.
-
-Current limitations
-
-OTL-O 0.1 does not yet provide:
-
-a formal OWL ontology;
-an RDF representation;
-a JSON Schema;
-mappings to SNOMED CT, ICD, MeSH, UMLS or other external terminologies;
-a complete controlled vocabulary;
-automated reasoning;
-validated annotation guidelines;
-measured inter-rater reliability.
-
-These are future development tasks.
-
-Version
-
-Current version:
-
-OTL-O 0.1.0
-
-This is an experimental research specification and should be expected to change as it is tested against real scientific literature.
-
-
-### Commit it as
-
-**Commit message:**
-
-```text
-Add OTL-O ontology specification README
                ▼
             OUTCOME
