@@ -461,27 +461,44 @@ For example, improvement in tinnitus distress does not by itself establish that 
 
 ---
 
-## CausalRelationship
+## CausalRelationship relationships
 
-A CausalRelationship represents a proposed or supported causal connection between two entities.
+A CausalRelationship may connect:
 
-Examples include:
+- `cause` → Exposure
+- `cause` → BiologicalState
+- `cause` → Intervention
+- `cause` → Tinnitus
+- `cause` → Phenotype
+- `cause` → Impact
+- `cause` → Outcome
+- `effect` → Tinnitus
+- `effect` → Phenotype
+- `effect` → Impact
+- `effect` → BiologicalState
+- `effect` → Outcome
+- `supported_by` → Evidence
+- `contradicted_by` → Evidence
+- `tested_by` → Study
+- `derived_from` → Claim
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
 
-- Exposure `causes` Tinnitus
-- Mechanism `maintains` Tinnitus
-- Intervention `reverses` BiologicalState
-- BiologicalState `contributes_to` Outcome
+A CausalRelationship represents an explicitly asserted causal connection.
 
-A CausalRelationship should contain:
+The following must not be represented as CausalRelationships:
 
-- source entity
-- target entity
-- relationship type
-- causal phase
-- evidence status
-- confidence
-- provenance
+- association alone;
+- correlation alone;
+- temporal precedence alone;
+- prediction alone;
+- biological plausibility alone.
 
+These relationships require separate relationship types.
+
+A causal assertion must retain its supporting and contradictory evidence.
+
+The presence of a CausalRelationship in OTL-O does not by itself establish that the relationship is scientifically established.
 ---
 
 ## Causal relationship vocabulary
