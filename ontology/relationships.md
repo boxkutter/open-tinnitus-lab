@@ -137,6 +137,31 @@ Associations between Tinnitus and an Exposure or BiologicalState do not establis
 
 A causal interpretation must be represented explicitly through a CausalRelationship and supported by evidence.
 
+---
+
+## Intervention relationships
+
+An Intervention may:
+
+- `targets` → BiologicalState
+- `targets` → Mechanism
+- `intended_to_modify` → Tinnitus
+- `intended_to_modify` → Phenotype
+- `intended_to_modify` → Impact
+- `evaluated_by` → Study
+- `produces` → Outcome
+- `supported_by` → Evidence
+- `contradicted_by` → Evidence
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
+
+An Intervention may be used as a treatment, experimental manipulation, or causal test.
+
+An Intervention must not be assumed to be effective because it targets a plausible Mechanism.
+
+Evidence of an Intervention effect should be represented through Measurements, Observations, Outcomes, and Evidence.
+
+A lack of observed effect is itself a scientifically relevant result and should not be discarded.
 
 ---
 
