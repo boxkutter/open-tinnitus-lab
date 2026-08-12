@@ -63,6 +63,43 @@ An Exposure may:
 
 ---
 
+## Population relationships
+
+A Population may:
+
+- `includes` → Person
+- `participates_in` → Study
+- `has_context` → Context
+- `has_exposure` → Exposure
+- `has_tinnitus` → Tinnitus
+- `has_phenotype` → Phenotype
+- `has_endotype` → Endotype
+
+Population membership does not imply that every individual in the Population has identical characteristics.
+
+A Population should retain the criteria used to define it where available.
+
+---
+
+## Endotype relationships
+
+An Endotype may:
+
+- `proposed_from` → BiologicalState
+- `associated_with` → Phenotype
+- `associated_with` → Tinnitus
+- `supported_by` → Evidence
+- `contradicted_by` → Evidence
+- `tested_by` → Study
+- `forms_basis_of` → Hypothesis
+
+An Endotype represents a proposed biological classification.
+
+Association between an Endotype and a Phenotype does not establish that the Endotype causes the Phenotype.
+
+The existence of an Endotype requires appropriate supporting evidence and provenance.
+---
+
 ## Tinnitus relationships
 
 A Tinnitus entity may:
