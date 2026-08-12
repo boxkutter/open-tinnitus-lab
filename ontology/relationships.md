@@ -115,6 +115,44 @@ A Tinnitus entity may:
 
 ---
 
+## Observation relationships
+
+An Observation may:
+
+- `about` → Person
+- `about` → Population
+- `about` → Tinnitus
+- `about` → Phenotype
+- `about` → Exposure
+- `about` → BiologicalState
+- `reported_by` → Study
+- `supported_by` → Measurement
+- `described_by` → Claim
+
+An Observation describes a finding.
+
+An Observation must not automatically be interpreted as a mechanism, hypothesis, or causal relationship.
+
+An Observation may be qualitative or quantitative.
+
+---
+
+## Measurement relationships
+
+A Measurement may:
+
+- `measures` → Construct
+- `uses` → Instrument
+- `describes` → Observation
+- `obtained_from` → Person
+- `obtained_from` → Population
+- `reported_by` → Study
+
+A Measurement represents a recorded result.
+
+The existence of a Measurement does not establish the biological interpretation of that result.
+---
+
 ## Phenotype relationships
 
 A Phenotype may:
