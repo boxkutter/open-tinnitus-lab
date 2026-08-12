@@ -375,20 +375,31 @@ A Study may contain multiple populations, comparison groups, interventions, meas
 
 Evidence may:
 
-- `derived_from` → Study
+- `supports` → Claim
 - `supports` → Hypothesis
-- `contradicts` → Hypothesis
 - `supports` → Mechanism
-- `contradicts` → Mechanism
+- `supports` → Prediction
 - `supports` → CausalRelationship
+- `contradicts` → Claim
+- `contradicts` → Hypothesis
+- `contradicts` → Mechanism
+- `contradicts` → Prediction
 - `contradicts` → CausalRelationship
-- `addresses` → ResearchQuestion
-- `identifies` → ResearchGap
+- `derived_from` → Observation
+- `derived_from` → Measurement
+- `derived_from` → Study
 - `has_provenance` → Provenance
+- `reviewed_by` → Review
 
-Evidence may support one claim while contradicting another.
+Evidence describes information relevant to evaluating a scientific assertion.
 
-The interpretation of Evidence must therefore always retain its relationship to the specific Claim or Hypothesis being evaluated.
+Evidence does not automatically establish truth.
+
+The same body of evidence may support one Claim while contradicting another, depending on the propositions being evaluated.
+
+Contradictory evidence must be retained rather than silently discarded.
+
+Evidence should preserve the source, result, limitations, and provenance where available.
 
 ---
 
