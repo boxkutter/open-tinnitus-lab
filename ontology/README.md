@@ -162,5 +162,56 @@ An AI-generated hypothesis or interpretation may be recorded, but it does not be
 
 This represents the conceptual architecture of OTL-O. It is not itself a database schema.
 
-               ▼
-            OUTCOME
+## External standards
+
+OTL-O should reference established tinnitus standardisation work rather than attempting to replace it.
+
+Important reference frameworks include:
+
+- Tinnitus Research Initiative assessment and outcome standards
+- TINNET/COMiT work on outcome measurement
+- COMiT'ID core outcome domains
+- International consensus work on tinnitus definition and classification
+- Consensus work on somatosensory tinnitus
+
+See `provenance.md` for the initial reference framework.
+
+## Validation status
+
+Version 0.1 has been conceptually tested against representative tinnitus standardisation and consensus publications.
+
+The validation demonstrated that the model can represent:
+
+- Standardized patient assessment
+- Tinnitus phenotype and impact separately
+- Constructs separately from measurement instruments
+- Longitudinal and cross-sectional studies
+- Consensus statements
+- Unresolved diagnostic and biomarker questions
+- Competing interpretations
+- Evidence and provenance
+
+This is a conceptual validation, not yet a formal ontology-reasoner validation.
+
+## Current limitations
+
+OTL-O 0.1 does not yet provide:
+
+- A formal OWL ontology
+- An RDF representation
+- A JSON Schema
+- Mappings to SNOMED CT, ICD, MeSH, UMLS or other external terminologies
+- A complete controlled vocabulary
+- Automated reasoning
+- Validated annotation guidelines
+- Measured inter-rater reliability
+
+These are future development tasks.
+
+## Version
+
+Current version:
+
+**OTL-O 0.1.0**
+
+This is an experimental research specification and should be expected to change as it is tested against real scientific literature.
