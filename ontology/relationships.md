@@ -137,20 +137,29 @@ An Observation may be qualitative or quantitative.
 
 ---
 
-## Measurement relationships
 
-A Measurement may:
+## Claim relationships
 
-- `measures` → Construct
-- `uses` → Instrument
+A Claim may:
+
 - `describes` → Observation
-- `obtained_from` → Person
-- `obtained_from` → Population
-- `reported_by` → Study
+- `concerns` → Phenotype
+- `concerns` → BiologicalState
+- `concerns` → Mechanism
+- `concerns` → Intervention
+- `concerns` → Outcome
+- `supported_by` → Evidence
+- `contradicted_by` → Evidence
+- `tested_by` → Study
+- `generates` → Hypothesis
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
 
-A Measurement represents a recorded result.
+A Claim is a proposition asserted by a source or generated during scientific analysis.
 
-The existence of a Measurement does not establish the biological interpretation of that result.
+A Claim must not be treated as established merely because it has been published.
+
+Claims may remain unresolved, contested, or contradicted.
 ---
 
 ## Phenotype relationships
