@@ -160,6 +160,7 @@ A Claim is a proposition asserted by a source or generated during scientific ana
 A Claim must not be treated as established merely because it has been published.
 
 Claims may remain unresolved, contested, or contradicted.
+
 ---
 
 
@@ -369,6 +370,7 @@ The results of a Study must be represented through Observations, Measurements, O
 A Study's Population should be represented as a Population entity where sufficient information is available.
 
 A Study may contain multiple populations, comparison groups, interventions, measurements, observations, and outcomes.
+
 ---
 
 ## Evidence relationships
@@ -499,6 +501,7 @@ These relationships require separate relationship types.
 A causal assertion must retain its supporting and contradictory evidence.
 
 The presence of a CausalRelationship in OTL-O does not by itself establish that the relationship is scientifically established.
+
 ---
 
 ## Causal relationship vocabulary
