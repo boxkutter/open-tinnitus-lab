@@ -495,13 +495,53 @@ Evidence should preserve the source, result, limitations, and provenance where a
 
 A ResearchQuestion may:
 
-- `motivates` → Study
+- `concerns` → Tinnitus
+- `concerns` → Phenotype
+- `concerns` → Impact
+- `concerns` → BiologicalState
+- `concerns` → Mechanism
+- `concerns` → Intervention
+- `concerns` → Outcome
+- `arises_from` → ResearchGap
 - `generates` → Hypothesis
-- `has_gap` → ResearchGap
-- `addressed_by` → Evidence
 - `addressed_by` → Study
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
 
-A ResearchQuestion may remain unresolved after multiple studies.
+A ResearchQuestion defines a scientific question to be investigated.
+
+A ResearchQuestion does not imply that a particular answer is correct.
+
+---
+
+## ResearchGap relationships
+
+A ResearchGap may:
+
+- `concerns` → Tinnitus
+- `concerns` → Phenotype
+- `concerns` → BiologicalState
+- `concerns` → Mechanism
+- `concerns` → Intervention
+- `concerns` → Outcome
+- `identified_by` → Study
+- `identified_by` → Review
+- `generates` → ResearchQuestion
+- `has_provenance` → Provenance
+
+A ResearchGap represents an area where available scientific evidence is insufficient, contradictory, incomplete, or absent.
+
+A ResearchGap must not be interpreted as evidence supporting a particular hypothesis.
+
+A ResearchGap may result from:
+
+- absence of evidence;
+- contradictory evidence;
+- inadequate measurement;
+- insufficient sample size;
+- insufficient longitudinal evidence;
+- an understudied population;
+- an unresolved biological mechanism.
 
 ---
 
