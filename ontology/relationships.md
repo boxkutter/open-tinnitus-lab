@@ -162,6 +162,31 @@ A Claim must not be treated as established merely because it has been published.
 Claims may remain unresolved, contested, or contradicted.
 ---
 
+
+## Hypothesis relationships
+
+A Hypothesis may:
+
+- `concerns` → Tinnitus
+- `concerns` → Phenotype
+- `concerns` → BiologicalState
+- `proposes` → Mechanism
+- `generates` → Prediction
+- `supported_by` → Evidence
+- `contradicted_by` → Evidence
+- `tested_by` → Study
+- `derived_from` → Claim
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
+
+A Hypothesis is a testable proposition.
+
+A Hypothesis may be supported, contradicted, partially supported, or unresolved.
+
+A Hypothesis must not be treated as established solely because it is biologically plausible or widely cited.
+
+---
+
 ## Phenotype relationships
 
 A Phenotype may:
