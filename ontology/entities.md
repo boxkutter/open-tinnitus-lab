@@ -87,152 +87,239 @@ These interpretations require evidence.
 
 ---
 
+## Population
+
+A defined group of individuals sharing characteristics relevant to a study, analysis, or scientific claim.
+
+A Population may represent the full population of interest, a study population, a subgroup, or a comparison group.
+
+Examples include:
+
+- people with chronic tinnitus
+- people with acute tinnitus following acoustic trauma
+- people with somatosensory tinnitus
+- people with tinnitus and hearing loss
+- healthy controls
+- treatment responders
+- treatment non-responders
+
+### Required attributes
+
+- `id`
+
+### Optional attributes
+
+- size
+- inclusion criteria
+- exclusion criteria
+- age range
+- age distribution
+- sex distribution
+- tinnitus characteristics
+- hearing characteristics
+- recruitment source
+- geographic context
+- study context
+
+Population characteristics may modify the interpretation and generalisability of scientific evidence.
+
+A Population must not be treated as interchangeable with a Person or a Study.
+
+---
+
 ## Tinnitus
 
-The tinnitus condition or percept being studied.
+A reported or observed auditory percept characterised by the perception of sound in the absence of a corresponding external acoustic stimulus.
 
-OTL-O represents tinnitus as a phenomenon and does not assume that all tinnitus has the same biological mechanism.
+OTL-O uses Tinnitus as the condition or phenomenon being investigated.
 
-Tinnitus may have multiple phenotypes, trajectories, causes, maintaining factors, and biological mechanisms.
+The presence of tinnitus does not by itself establish a particular biological mechanism.
+
+### Optional attributes
+
+- onset
+- duration
+- laterality
+- temporal pattern
+- percept characteristics
+- severity
+- phenotype
+- impact
 
 ---
 
 ## Phenotype
 
-Observable characteristics of tinnitus.
+The observable characteristics of a person's tinnitus.
 
-Initial phenotype attributes include:
+A Phenotype describes what tinnitus looks, sounds, or feels like from the perspective of the individual or measurement system.
 
-- onset
-- duration
+Examples include:
+
 - laterality
-- percept
-- temporal pattern
-- pulsatility
+- percept type
 - pitch
 - loudness
+- temporal pattern
 - modulation
-- associated features
+- onset characteristics
+- associated symptoms
 
-Phenotype describes what is observed.
+Phenotype describes observable characteristics.
 
-It does not, by itself, establish a biological mechanism.
+It must not automatically be interpreted as an underlying biological mechanism.
 
 ---
 
 ## Impact
 
-The effect tinnitus has on an individual.
+The effects of tinnitus on an individual's functioning, wellbeing, or quality of life.
 
-Initial domains include:
+Examples include:
 
-- intrusiveness
 - distress
-- ability to ignore
-- concentration
-- sleep
-- sense of control
-- acceptance
-- mood
-- quality of life
-- functional impact
+- sleep disruption
+- concentration difficulty
+- anxiety
+- reduced quality of life
+- occupational impairment
+- social impairment
 
-Impact is distinct from the tinnitus percept itself.
+Impact should be distinguished from the tinnitus percept itself.
 
-For example, two people may report similar tinnitus percepts but experience substantially different levels of impact.
+A high-impact tinnitus phenotype does not necessarily indicate a more severe underlying biological abnormality.
 
 ---
 
 ## Trajectory
 
-The time-dependent course of tinnitus.
+The pattern of change in tinnitus or related observations over time.
 
-Possible trajectory states include:
+Examples include:
 
 - onset
 - acute
-- resolving
 - persistent
+- fluctuating
+- resolving
 - remission
 - recurrence
 - exacerbation
-- fluctuation
 
-Trajectory should be represented using timestamped observations rather than overwriting previous states.
+Trajectory may describe changes in:
 
-A trajectory may therefore represent patterns such as:
+- tinnitus phenotype
+- tinnitus impact
+- biological measurements
+- treatment response
 
-```text
-onset
-  ↓
-acute
-  ↓
-resolving
-  ↓
-remission
+Temporal change should be represented using observations and measurements where appropriate.
 
-or:
+---
 
-onset
-  ↓
-persistent
-  ↓
-exacerbation
-  ↓
-partial remission
-  ↓
-recurrence
-```
+## Endotype
+
+A proposed grouping of tinnitus based on an underlying biological mechanism or biological state.
+
+An Endotype is a scientific hypothesis about biological heterogeneity rather than an assumption that biologically distinct tinnitus types have been established.
+
+### Status
+
+An Endotype may have a status such as:
+
+- proposed
+- candidate
+- supported
+- validated
+- contested
+- rejected
+- unknown
+
+An Endotype must have supporting evidence and provenance.
+
+The existence of an Endotype must not be inferred solely from differences in phenotype.
+
+
+---
+
+## Observation
+
+A reported or recorded finding about a Person, Population, Tinnitus, Phenotype, Exposure, BiologicalState, Intervention, or other research subject.
+
+An Observation may be qualitative or quantitative.
+
+Examples include:
+
+- a participant reports continuous tinnitus;
+- a study observes increased neural activity;
+- tinnitus severity decreases following an intervention;
+- a population has a higher prevalence of hearing loss.
+
+An Observation describes what was observed.
+
+It must be distinguished from an interpretation or hypothesis about why the observation occurred.
+
+### Optional attributes
+
+- subject
+- population
+- observation type
+- value
+- time
+- source
+- method
+- uncertainty
+
+An Observation may be supported by one or more Measurements.
+
 ---
 
 ## Measurement
 
-An actual measurement or assessment performed on a Person, population, biological system, or other research subject.
+A quantitative or structured result obtained by applying an Instrument or method to a Construct.
 
-A Measurement records an observed value or result.
+Examples include:
 
-Conceptually, a Measurement contains:
+- hearing threshold
+- tinnitus questionnaire score
+- EEG measurement
+- fMRI measurement
+- otoacoustic emission measurement
+- blood biomarker concentration
 
-- construct
-- method
-- instrument
-- value
-- unit
-- time
-- context
-- source
+A Measurement records what was measured and the resulting value.
 
-A Measurement must remain distinct from the Construct being measured and the Instrument used to measure it.
+Measurement must be distinguished from the Construct being measured and the Instrument used to measure it.
+
+See `measurements.md` for the measurement model.
 
 ---
 
 ## Construct
 
-The concept or property that a Measurement is intended to measure.
+A property, characteristic, or theoretical concept that a researcher intends to measure.
 
 Examples include:
 
 - tinnitus loudness
-- tinnitus intrusiveness
 - tinnitus distress
 - hearing threshold
-- sleep quality
 - neural activity
 - neural synchrony
-- cochlear function
+- sleep quality
 - quality of life
 
-The Construct answers:
+A Construct answers:
 
-> What are we measuring?
+> What is being measured?
 
-It does not specify how the measurement was obtained.
+A Construct must not be confused with the Instrument used to measure it.
 
 ---
 
 ## Instrument
 
-The specific tool, questionnaire, test, device, assay, or protocol used to obtain a Measurement.
+A tool, questionnaire, device, assay, protocol, or other method used to obtain a Measurement.
 
 Examples include:
 
@@ -243,399 +330,446 @@ Examples include:
 - fMRI
 - otoacoustic emissions
 - auditory brainstem response
-- blood assay
-- genetic sequencing
 
-The Instrument answers:
+An Instrument answers:
 
-> How was it measured?
+> How was the construct measured?
 
-The distinction between what is measured and how it is measured is important in tinnitus research standardisation.
+Instrument identity and version should be retained where available.
 
 ---
 
 ## BiologicalState
 
-An observed biological characteristic or state.
+A biological condition, state, process, or activity observed or proposed to be relevant to tinnitus.
 
-Initial biological domains include:
+Examples include:
 
-- peripheral auditory
-- cochlear
-- auditory nerve
-- brainstem
-- central auditory
-- somatosensory
-- neural network
-- autonomic
-- inflammatory
-- metabolic
-- vascular
-- genetic
-- other
-- unknown
+- cochlear injury
+- reduced auditory input
+- altered neural activity
+- altered neural synchrony
+- inflammation
+- altered sensory processing
+- changes in inhibitory or excitatory signalling
 
-A BiologicalState is descriptive.
+A BiologicalState may be:
 
-It must not automatically be classified as a Mechanism.
+- observed
+- measured
+- inferred
+- proposed
+- hypothesized
 
-For example:
+The status of a BiologicalState must be distinguished from the evidence supporting its existence or relevance to tinnitus.
 
-Observation:
+A BiologicalState must not automatically be classified as a Mechanism.
 
-increased neural synchrony
+---
 
-does not automatically mean:
+## Claim
 
-Mechanism:
+A proposition asserted by a scientific source or generated during scientific analysis.
 
-increased neural synchrony causes tinnitus
+A Claim may describe:
 
-The second statement requires additional evidence.
+- an observation
+- an association
+- a biological relationship
+- a mechanism
+- a causal relationship
+- an intervention effect
+- a research finding
+
+Examples include:
+
+- tinnitus is associated with hearing loss;
+- a particular neural pattern occurs in people with tinnitus;
+- an intervention reduces tinnitus distress.
+
+A Claim must retain provenance.
+
+A Claim is not automatically true because it appears in a peer-reviewed publication.
+
+### Optional attributes
+
+- statement
+- status
+- source
+- evidence
+- confidence
+- review status
 
 ---
 
 ## Mechanism
 
-A proposed biological process that could explain an observation, phenotype, trajectory, or outcome.
+A proposed process or interaction through which one or more factors may contribute to the onset, persistence, modification, or resolution of tinnitus.
 
 Examples include:
 
-- central gain
-- homeostatic plasticity
-- cochlear synaptopathy
-- neural synchrony
-- maladaptive plasticity
-- auditory-somatosensory interaction
-- predictive processing
-- salience processing
+- altered central auditory processing
+- maladaptive neural plasticity
+- somatosensory-auditory interaction
+- changes in inhibitory signalling
 
-A Mechanism must have an explicit evidence/status state.
+A Mechanism is an explanatory model.
 
-Possible statuses include:
-
-- proposed
-- supported
-- strongly supported
-- contested
-- contradicted
-- established
-- unknown
-
-The ontology does not assume that any particular proposed tinnitus mechanism is correct.
+A mechanism should be supported by evidence and must not be treated as established merely because it is biologically plausible.
 
 ---
 
 ## Hypothesis
 
-A formally stated proposition that can generate testable predictions.
+A scientifically testable proposition that proposes a possible explanation, relationship, mechanism, or prediction.
 
-A Hypothesis should contain:
+A Hypothesis should specify, where possible:
 
-- identifier
-- statement
-- status
-- predictions
+- the proposed relationship
+- the relevant population
+- the relevant biological or phenotypic state
+- expected observations
+- predictions that could test the hypothesis
 - supporting evidence
 - contradictory evidence
-- related mechanisms
-- provenance
+
+AI-generated hypotheses must be explicitly identified as AI-generated through provenance.
 
 ---
 
 ## Prediction
 
-A specific observation expected if a Hypothesis is correct.
+A testable expected observation derived from a Claim, Hypothesis, Mechanism, or causal model.
 
-For example, if a hypothesis proposes that a biological process maintains persistent tinnitus, it may predict that the process should differ between people whose tinnitus resolves and people whose tinnitus persists.
+A Prediction should specify what would be expected to occur if the underlying proposition is correct.
 
-Predictions are important because they transform explanatory claims into testable scientific propositions.
+Examples include:
+
+- an intervention targeting mechanism X should reduce tinnitus severity;
+- individuals with biological state X should exhibit measurement Y;
+- changing exposure X should alter outcome Y.
+
+Predictions are distinct from observations.
+
+A Prediction may subsequently be:
+
+- supported
+- partially supported
+- contradicted
+- not tested
+- unresolved
 
 ---
 
 ## Study
 
-A scientific investigation producing observations, measurements, results, or evidence.
-
-Suggested attributes include:
-
-- id
-- title
-- authors
-- publication
-- year
-- study type
-- population
-- sample size
-- intervention
-- comparator
-- measurements
-- outcomes
-- limitations
-- provenance
-
-Initial study types include:
-
-- cross-sectional
-- longitudinal
-- case-control
-- cohort
-- randomized controlled trial
-- clinical trial
-- observational
-- experimental
-- animal
-- in vitro
-- computational
-- systematic review
-- meta-analysis
-- consensus
-- other
-
-A Study may test one or more hypotheses.
-
----
-
-## Evidence
-
-A result from a Study that is relevant to a scientific Claim, Hypothesis, Mechanism, or Research Question.
-
-Evidence should retain:
-
-- source Study
-- result
-- direction
-- evidence type
-- replication status
-- consistency
-- limitations
-- provenance
-
-Evidence may:
-
-- support a hypothesis
-- contradict a hypothesis
-- partially support a hypothesis
-- provide no clear evidence
-- remain ambiguous
-
-Evidence must not be reduced to a simple true/false value.
-
----
-
-## ResearchQuestion
-
-A question that the laboratory intends to investigate.
-
-A ResearchQuestion may be associated with:
-
-- ResearchGaps
-- Hypotheses
-- Studies
-- Evidence
-- Predictions
-
-Research Questions may evolve as evidence accumulates.
-
----
-
-## ResearchGap
-
-A scientifically meaningful unresolved question, missing evidence, contradiction, or limitation in current knowledge.
+A structured scientific investigation designed to answer one or more research questions.
 
 Examples include:
 
-- lack of a validated objective biomarker
-- conflicting evidence for a proposed mechanism
-- absence of longitudinal evidence
-- inability to distinguish tinnitus subtypes biologically
-- insufficient evidence concerning a proposed intervention
-- inconsistent measurement methods
+- cross-sectional study
+- longitudinal study
+- cohort study
+- case-control study
+- randomized controlled trial
+- experimental study
+- animal study
+- computational study
+- systematic review
+- meta-analysis
+- consensus study
 
-A ResearchGap should ideally reference the evidence demonstrating that the gap exists.
+A Study may contain:
+
+- Population
+- ResearchQuestion
+- Measurements
+- Intervention
+- Comparator
+- Outcome
+- Observation
+- Claim
+- Evidence
+
+A Study must have provenance.
 
 ---
 
 ## Intervention
 
-An action intended to alter tinnitus, a biological mechanism, a phenotype, or an outcome.
+An action, treatment, exposure modification, procedure, or experimental manipulation intended to change a biological state, tinnitus characteristic, or outcome.
 
-Initial intervention types include:
+Examples include:
 
-- pharmacological
-- sound-based
-- electrical
-- magnetic
-- behavioral
-- psychological
-- surgical
-- somatosensory
-- combined
-- other
+- pharmacological treatment
+- sound-based intervention
+- electrical stimulation
+- magnetic stimulation
+- behavioral intervention
+- psychological intervention
+- surgical intervention
+- somatosensory intervention
 
-An Intervention may have:
+An Intervention may be investigated as a treatment, experimental manipulation, or causal test.
 
-- a proposed target
-- a proposed mechanism
-- a measured biological effect
-- a measured clinical effect
-- adverse effects
-- uncertainty
-
-The proposed mechanism of an intervention must remain separate from the mechanism actually demonstrated by evidence.
+The existence of an Intervention effect must be supported by evidence.
 
 ---
 
 ## Outcome
 
-A measured result representing a change following an Intervention or natural progression.
+A measured or observed result associated with a Study, Intervention, exposure, or biological change.
 
-Possible outcome domains include:
+Examples include:
 
-- tinnitus percept
-- tinnitus loudness
-- tinnitus intrusiveness
+- tinnitus severity
 - tinnitus distress
-- ability to ignore
-- concentration
-- sleep
-- sense of control
-- acceptance
-- mood
+- tinnitus loudness
+- hearing threshold
 - quality of life
-- hearing
-- functional status
-- adverse effects
+- treatment response
+- adverse event
 
-The appropriate outcome domains may depend on the intervention being studied.
-
-OTL-O therefore does not assume that one identical outcome set applies to every tinnitus intervention.
+An Outcome should identify the Construct and Measurement used where applicable.
 
 ---
 
-## CausalRelationship
+## Evidence
 
-A typed relationship between two entities that expresses a proposed or supported causal connection.
+Structured information that supports, contradicts, or otherwise informs a scientific Claim, Hypothesis, Mechanism, Prediction, or CausalRelationship.
 
-Initial relationship types include:
+Evidence may originate from:
 
-- risk factor for
-- associated with
-- temporally precedes
-- triggers
-- contributes to
-- mediates
-- modifies
-- maintains
-- causes
-- prevents
-- reverses
+- observations
+- measurements
+- studies
+- systematic reviews
+- meta-analyses
+- consensus statements
+- experimental results
 
-A CausalRelationship must include:
+Evidence should retain:
 
-- evidence status
+- source
+- result
+- evidence type
+- direction
+- replication
+- consistency
+- limitations
 - provenance
 
-The existence of a CausalRelationship in the knowledge base does not mean that causality has been established.
+Evidence is not itself a claim about truth.
+
+See `evidence.md` for the OTL-O evidence model.
+
+---
+
+## ResearchQuestion
+
+A question that a scientific investigation is intended to answer.
+
+Examples include:
+
+- What biological processes contribute to tinnitus persistence?
+- Does hearing loss increase the risk of tinnitus?
+- Does intervention X reduce tinnitus distress?
+- Are there biologically distinct tinnitus endotypes?
+
+A ResearchQuestion may generate one or more Hypotheses.
+
+A ResearchQuestion may remain unresolved when available evidence is insufficient.
+
+---
+
+## ResearchGap
+
+An identified area where available scientific evidence is insufficient, contradictory, incomplete, or absent.
+
+Examples include:
+
+- an untested mechanism;
+- conflicting findings between studies;
+- an unvalidated biomarker;
+- an understudied tinnitus phenotype;
+- absence of longitudinal evidence.
+
+A ResearchGap should have provenance explaining why it has been identified.
+
+A ResearchGap is not evidence that a particular hypothesis is correct.
 
 ---
 
 ## Contradiction
 
-A conflict between scientific claims, observations, studies, or interpretations.
+A documented incompatibility, disagreement, or conflicting result between two or more Claims, Observations, or bodies of Evidence.
 
-A Contradiction should record:
+A Contradiction should preserve all relevant sources rather than selecting one result as correct by default.
 
-- the claim in question
-- supporting evidence
-- contradictory evidence
-- possible explanations
-- current status
+Possible explanations for a contradiction include:
 
-Possible explanations include:
+- different populations;
+- different tinnitus phenotypes;
+- different measurement methods;
+- different study designs;
+- methodological limitations;
+- statistical uncertainty;
+- biological heterogeneity;
+- genuine scientific disagreement;
+- unknown factors.
 
-- phenotype difference
-- population difference
-- measurement difference
-- methodological difference
-- statistical power
-- confounding
-- genuine biological heterogeneity
-- unknown
+---
 
-Contradictions are important research objects and must not be discarded.
+## CausalRelationship
+
+A structured assertion that one entity, event, state, exposure, intervention, or process causes or contributes to a change in another.
+
+Examples include:
+
+- an exposure causes tinnitus onset;
+- a biological state maintains tinnitus;
+- an intervention reduces tinnitus distress;
+- a biological process mediates an observed relationship.
+
+A CausalRelationship must be distinguished from:
+
+- association;
+- temporal precedence;
+- correlation;
+- prediction;
+- mechanistic plausibility.
+
+A CausalRelationship requires appropriate supporting evidence.
+
+The strength or status of a causal relationship must not be inferred solely from its existence in the knowledge base.
 
 ---
 
 ## Provenance
 
-Information describing where a scientific assertion, measurement, observation, or interpretation came from.
+Information describing the origin, history, extraction, interpretation, review, and modification of an OTL-O record.
 
-Provenance should identify:
+Provenance may identify:
 
-- source type
-- publication or dataset
+- source
 - persistent identifier
-- extraction date
+- source location
 - extractor
-- relevant location within the source where possible
+- extraction method
+- extraction date
+- reviewer
+- review status
+- version history
 
-Every source-backed scientific claim should have traceable provenance.
+See `provenance.md` for the OTL-O provenance model.
 
 ---
 
 ## Review
 
-A record describing the review state of a scientific object.
+A documented evaluation of an OTL-O record, extraction, interpretation, Claim, Hypothesis, or other research object.
 
-Review may involve:
+A Review may be performed by:
 
-- AI review
-- human review
-- independent verification
-- disagreement
-- dispute resolution
+- human researcher
+- independent reviewer
+- AI-assisted process
+- automated validation system
 
-Possible review states include:
+AI review must remain distinguishable from human scientific review.
 
-- unreviewed
-- AI reviewed
-- human reviewed
-- independently verified
-- disputed
+A Review should record:
 
-Review status describes the state of the review process.
+- reviewer
+- date
+- object reviewed
+- outcome
+- corrections
+- comments where applicable
 
-It does not itself establish scientific truth.
+
+---
+
+## Entity relationships
+
+The following high-level relationships describe how the principal OTL-O entities interact.
+
+A Person may belong to a Population.
+
+A Person may have a Tinnitus condition.
+
+A Person may have one or more Contexts and Exposures.
+
+A Tinnitus condition may have a Phenotype, Impact, and Trajectory.
+
+A Population may be the subject of a Study.
+
+A Study may produce Observations, Measurements, Outcomes, Claims, and Evidence.
+
+An Observation may be described by one or more Measurements.
+
+A Measurement measures a Construct using an Instrument.
+
+A BiologicalState may be observed, measured, proposed, or hypothesized.
+
+A Claim may be supported or contradicted by Evidence.
+
+A Hypothesis may propose a Mechanism.
+
+A Hypothesis may generate Predictions.
+
+A Prediction may be tested by a Study.
+
+A Study may evaluate an Intervention.
+
+An Intervention may produce an Outcome.
+
+A ResearchQuestion may generate one or more Hypotheses.
+
+A ResearchGap may motivate a ResearchQuestion.
+
+A Contradiction may exist between Claims or bodies of Evidence.
+
+A CausalRelationship represents an explicitly asserted causal connection between relevant entities.
+
+All important scientific assertions should have Provenance.
+
+Scientific objects may undergo Review.
 
 ---
 
 ## Entity design principle
 
-The most important architectural distinction in OTL-O is:
+OTL-O separates:
 
-OBSERVATION
-    ↓
-MEASUREMENT
-    ↓
-EVIDENCE
-    ↓
-INTERPRETATION
-    ↓
-HYPOTHESIS
-    ↓
-PREDICTION
-    ↓
-TEST
+**what exists or is observed**
 
-These stages must not be collapsed into a single "fact" object.
+from:
 
-The purpose of this separation is to allow the Open Tinnitus Lab to represent not only what is currently believed about tinnitus, but also:
+**what is measured**
 
-- why it is believed
-- what evidence supports it
-- what evidence contradicts it
-- what remains uncertain
-- what predictions follow from it
-- what experiment could distinguish competing explanations
+from:
 
+**what is claimed**
+
+from:
+
+**what is hypothesized**
+
+from:
+
+**what evidence supports or contradicts those assertions**
+
+from:
+
+**what causal relationships are ultimately established.**
+
+This separation is fundamental to the scientific integrity of the ontology.
+
+---
+
+## Version
+
+Current entity specification version:
+
+**OTL-O Entities 0.1.1**
