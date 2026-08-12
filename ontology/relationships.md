@@ -698,14 +698,27 @@ Contradictions should remain linked to the evidence that produced them.
 
 ## Provenance relationships
 
-A Provenance record may:
+Provenance may:
 
-- `documents` → Study
-- `documents` → Evidence
-- `documents` → Measurement
-- `documents` → Claim
-- `documents` → Hypothesis
-- `documents` → CausalRelationship
+- `describes` → Person
+- `describes` → Population
+- `describes` → Study
+- `describes` → Observation
+- `describes` → Measurement
+- `describes` → Claim
+- `describes` → Hypothesis
+- `describes` → Prediction
+- `describes` → Mechanism
+- `describes` → Evidence
+- `describes` → Intervention
+- `describes` → Outcome
+- `describes` → ResearchQuestion
+- `describes` → ResearchGap
+- `describes` → Contradiction
+- `describes` → CausalRelationship
+- `describes` → Review
+
+Provenance records the origin and history of a research object.
 
 ---
 
@@ -713,16 +726,52 @@ A Provenance record may:
 
 A Review may:
 
-- `reviews` → Evidence
-- `reviews` → Hypothesis
-- `reviews` → Mechanism
-- `reviews` → Study
+- `reviews` → Observation
 - `reviews` → Measurement
+- `reviews` → Claim
+- `reviews` → Hypothesis
+- `reviews` → Prediction
+- `reviews` → Mechanism
+- `reviews` → Evidence
+- `reviews` → Study
+- `reviews` → Intervention
+- `reviews` → Outcome
+- `reviews` → ResearchQuestion
+- `reviews` → ResearchGap
 - `reviews` → CausalRelationship
 
-A Review records the review process and does not itself constitute scientific evidence.
+A Review may be performed by a human researcher, independent reviewer, AI-assisted process, or automated validation system.
+
+Human and AI review must remain distinguishable.
 
 ---
+
+## Contradiction relationships
+
+A Contradiction may:
+
+- `between` → Claim
+- `between` → Observation
+- `between` → Evidence
+- `between` → Hypothesis
+- `between` → Mechanism
+- `between` → Prediction
+- `between` → CausalRelationship
+- `identified_by` → Study
+- `identified_by` → Review
+- `has_provenance` → Provenance
+
+A Contradiction records an incompatibility, disagreement, or conflicting result.
+
+Contradictory findings must be retained rather than silently resolved by selecting one interpretation.
+
+A Contradiction does not necessarily mean that one of the conflicting findings is incorrect.
+
+Differences in population, measurement method, study design, statistical power, or other factors may explain an apparent contradiction.
+
+---
+
+
 
 ## Relationship design principle
 
