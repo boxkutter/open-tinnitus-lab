@@ -31,10 +31,20 @@ They must not be treated as interchangeable.
 
 A Person may:
 
+- `belongs_to` → Population
 - `has_context` → Context
 - `has_exposure` → Exposure
 - `has_tinnitus` → Tinnitus
 - `participates_in` → Study
+- `has_measurement` → Measurement
+- `has_observation` → Observation
+- `has_outcome` → Outcome
+
+A Person represents an individual research subject.
+
+Individual identity must not be inferred from an OTL-O identifier.
+
+Public repositories should not contain directly identifying personal information.
 
 ---
 
@@ -74,10 +84,15 @@ A Population may:
 - `has_tinnitus` → Tinnitus
 - `has_phenotype` → Phenotype
 - `has_endotype` → Endotype
+- `has_observation` → Observation
+- `has_measurement` → Measurement
+- `has_outcome` → Outcome
 
-Population membership does not imply that every individual in the Population has identical characteristics.
+A Population represents a defined group of individuals sharing characteristics relevant to a study or scientific analysis.
 
-A Population should retain the criteria used to define it where available.
+Population membership does not imply that every individual has identical characteristics.
+
+A Population should retain its inclusion and exclusion criteria where available.
 
 ---
 
