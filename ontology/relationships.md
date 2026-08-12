@@ -347,13 +347,28 @@ A Study may:
 - `investigates` → ResearchQuestion
 - `tests` → Hypothesis
 - `tests` → Prediction
+- `includes` → Population
+- `includes` → Person
+- `includes` → Intervention
 - `uses` → Instrument
+- `measures` → Construct
+- `produces` → Observation
 - `produces` → Measurement
-- `produces` → Evidence
-- `evaluates` → Intervention
-- `reports` → Outcome
+- `produces` → Outcome
+- `reports` → Claim
+- `generates` → Evidence
 - `has_provenance` → Provenance
+- `reviewed_by` → Review
 
+A Study is a scientific investigation.
+
+A Study may test a Hypothesis without confirming it.
+
+The results of a Study must be represented through Observations, Measurements, Outcomes, Claims, and Evidence rather than being treated as automatically true conclusions.
+
+A Study's Population should be represented as a Population entity where sufficient information is available.
+
+A Study may contain multiple populations, comparison groups, interventions, measurements, observations, and outcomes.
 ---
 
 ## Evidence relationships
