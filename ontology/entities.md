@@ -86,6 +86,7 @@ An Exposure may subsequently be investigated as:
 These interpretations require evidence.
 
 ---
+---
 
 ## Population
 
@@ -103,10 +104,6 @@ Examples include:
 - treatment responders
 - treatment non-responders
 
-### Required attributes
-
-- `id`
-
 ### Optional attributes
 
 - size
@@ -121,10 +118,9 @@ Examples include:
 - geographic context
 - study context
 
-Population characteristics may modify the interpretation and generalisability of scientific evidence.
+Population characteristics may affect the interpretation and generalisability of scientific evidence.
 
 A Population must not be treated as interchangeable with a Person or a Study.
-
 ---
 
 ## Tinnitus
