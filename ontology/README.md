@@ -158,6 +158,7 @@ An AI-generated hypothesis or interpretation may be recorded, but it does not be
                │
                ▼
             OUTCOME
+```
 
 This represents the conceptual architecture of OTL-O. It is not itself a database schema.
 
