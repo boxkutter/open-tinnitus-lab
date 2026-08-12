@@ -313,13 +313,24 @@ does not establish that the biological state is the mechanism.
 
 A Mechanism may:
 
-- `associated_with` → Tinnitus
-- `associated_with` → Phenotype
-- `associated_with` → BiologicalState
+- `proposed_by` → Claim
+- `proposed_by` → Hypothesis
+- `concerns` → BiologicalState
+- `concerns` → Tinnitus
 - `explains` → Observation
 - `predicts` → Observation
-- `forms_basis_of` → Hypothesis
-- `targeted_by` → Intervention
+- `generates` → Prediction
+- `supported_by` → Evidence
+- `contradicted_by` → Evidence
+- `tested_by` → Study
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
+
+A Mechanism is an explanatory model describing how one or more processes may contribute to tinnitus or another research outcome.
+
+Mechanistic plausibility does not establish causation.
+
+A proposed Mechanism may remain unresolved even when individual components of the mechanism have supporting evidence.
 
 ---
 
