@@ -315,6 +315,7 @@ This is intentional.
 
 A hypothesis should not be represented as either simply "true" or "false" while evidence remains incomplete.
 
+
 ---
 
 ## Prediction relationships
@@ -322,11 +323,20 @@ A hypothesis should not be represented as either simply "true" or "false" while 
 A Prediction may:
 
 - `derived_from` → Hypothesis
+- `derived_from` → Mechanism
+- `derived_from` → Claim
 - `tested_by` → Study
 - `supported_by` → Evidence
 - `contradicted_by` → Evidence
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
 
-A Prediction should be sufficiently specific that a future observation could determine whether it was supported, contradicted, or unresolved.
+A Prediction describes an expected observation or outcome that follows from a scientific proposition.
+
+A Prediction is distinct from an Observation.
+
+A Prediction may subsequently be supported, partially supported, contradicted, or remain untested.
+
 
 ---
 
