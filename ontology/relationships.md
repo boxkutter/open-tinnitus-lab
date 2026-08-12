@@ -47,6 +47,31 @@ Individual identity must not be inferred from an OTL-O identifier.
 Public repositories should not contain directly identifying personal information.
 
 ---
+## Outcome relationships
+
+An Outcome may:
+
+- `measures` → Tinnitus
+- `measures` → Phenotype
+- `measures` → Impact
+- `measures` → BiologicalState
+- `measures` → Construct
+- `measured_by` → Measurement
+- `associated_with` → Intervention
+- `associated_with` → Exposure
+- `reported_by` → Study
+- `supported_by` → Evidence
+- `contradicted_by` → Evidence
+- `has_provenance` → Provenance
+- `reviewed_by` → Review
+
+An Outcome is a measured or observed result associated with a Study, Intervention, exposure, or biological change.
+
+An Outcome must not automatically be interpreted as evidence of causation.
+
+Where an Outcome is used to evaluate an Intervention, the Study design and comparator should be retained where available.
+
+---
 
 ## Context relationships
 
