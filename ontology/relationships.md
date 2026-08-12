@@ -113,20 +113,30 @@ An Endotype represents a proposed biological classification.
 Association between an Endotype and a Phenotype does not establish that the Endotype causes the Phenotype.
 
 The existence of an Endotype requires appropriate supporting evidence and provenance.
+
 ---
 
 ## Tinnitus relationships
 
-A Tinnitus entity may:
+Tinnitus may:
 
 - `has_phenotype` → Phenotype
 - `has_impact` → Impact
 - `has_trajectory` → Trajectory
+- `has_endotype` → Endotype
+- `has_observation` → Observation
 - `has_measurement` → Measurement
-- `associated_with` → BiologicalState
 - `associated_with` → Exposure
-- `evaluated_by` → Instrument
-- `targeted_by` → Intervention
+- `associated_with` → BiologicalState
+- `affected_by` → Intervention
+- `has_provenance` → Provenance
+
+Tinnitus represents the condition or percept being investigated.
+
+Associations between Tinnitus and an Exposure or BiologicalState do not establish causation.
+
+A causal interpretation must be represented explicitly through a CausalRelationship and supported by evidence.
+
 
 ---
 
